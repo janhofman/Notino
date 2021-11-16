@@ -1,0 +1,84 @@
+ext {
+    sdk = [
+            compileSdk: 31,
+            minSdk    : 26,
+            targetSdk : 31
+    ]
+
+    javaConfig = [
+            version: JavaVersion.VERSION_1_8
+    ]
+
+    versions = [
+            koin      : "3.1.3",
+            room      : "2.3.0",
+            core_ktx  : "1.7.0",
+            glide     : "4.12.0",
+            appCompat : "1.3.1",
+            material  : "1.5.0-beta01",
+            constraint: "2.1.1",
+            lifecycle : "2.4.0",
+            navigation: "2.3.5",
+            legacy    : "1.0.0",
+            retrofit  : "2.9.0",
+            paging    : "3.0.1"
+    ]
+
+    androidDependencies = [
+            core              : "androidx.core:core-ktx:$versions.core_ktx",
+            appCompat         : "androidx.appcompat:appcompat:$versions.appCompat",
+            material          : "com.google.android.material:material:$versions.material",
+            constraint        : "androidx.constraintlayout:constraintlayout:$versions.constraint",
+            lifecycleLiveData : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
+            lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+            navigation        : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
+            legacy            : "androidx.legacy:legacy-support-v4:$versions.legacy",
+            room              : "androidx.room:room-ktx:$versions.room",
+            paging            : "androidx.paging:paging-runtime-ktx:$versions.paging"
+    ]
+
+    thirdPartyDependencies = [
+            koin        : "io.insert-koin:koin-core:$versions.koin",
+            koinAndroid : "io.insert-koin:koin-android:$versions.koin",
+            glide       : "com.github.bumptech.glide:glide:$versions.glide",
+            retrofit    : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            retrofitGson: "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+    ]
+
+    kaptDependencies = [
+            glide: "com.github.bumptech.glide:compiler:$versions.glide",
+            room : "androidx.room:room-compiler:$versions.room"
+    ]
+
+    presentationDependencies = [
+            thirdPartyDependencies.koinAndroid,
+            thirdPartyDependencies.glide,
+            androidDependencies.core,
+            androidDependencies.appCompat,
+            androidDependencies.material,
+            androidDependencies.constraint,
+            androidDependencies.lifecycleLiveData,
+            androidDependencies.lifecycleViewModel,
+            androidDependencies.navigationFragment,
+            androidDependencies.navigation,
+            androidDependencies.legacy,
+            androidDependencies.paging
+    ]
+
+    domainDependencies = [
+            thirdPartyDependencies.koin
+    ]
+
+    appDependencies = [
+            thirdPartyDependencies.koinAndroid
+    ]
+
+    dataDependencies = [
+            thirdPartyDependencies.koinAndroid,
+            thirdPartyDependencies.retrofit,
+            thirdPartyDependencies.retrofitGson,
+            androidDependencies.room
+    ]
+
+}

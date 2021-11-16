@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk sdk.compileSdk
+
+    defaultConfig {
+        applicationId "hofy.notino"
+        minSdk sdk.minSdk
+        targetSdk sdk.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("keystore/notino_debug.jks")
+            storePassword "debug_x_y_42"
+            keyAlias "notino_debug"
+            keyPassword "debug_x_y_42"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility javaConfig.version
+        targetCompatibility javaConfig.version
+    }
+    kotlinOptions {
+        jvmTarget = javaConfig.version
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation project(":data")
+    implementation project(":domain")
+    implementation project(":presentation")
+    implementation appDependencies
+}

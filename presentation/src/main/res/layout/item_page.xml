@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="page"
+            type="hofy.notino.presentation.model.product.ProductListItem.PageVO" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            page="@{page}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_layout_margin_half_up"
+            android:layout_marginTop="@dimen/base_layout_margin_half"
+            android:layout_marginEnd="@dimen/base_layout_margin_half_up"
+            android:layout_marginBottom="@dimen/base_layout_margin_half"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginStart="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:alpha=".2"
+            android:background="@color/black" />
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="hofy.notino.presentation.model.product.ProductVO" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_layout_margin"
+                android:layout_marginEnd="@dimen/base_layout_margin"
+                android:gravity="center"
+                android:text="@{product.brand}"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="HUGO" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_layout_margin"
+                android:layout_marginEnd="@dimen/base_layout_margin"
+                android:gravity="center"
+                android:text="@{product.description}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtBrand"
+                tools:text="deostick pro muže 75ml" />
+
+            <hofy.notino.presentation.ui.custom.RatingBarSvg
+                android:id="@+id/rating"
+                visible="@{product.rating != 0f}"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/rating_star_height"
+                android:layout_marginTop="@dimen/base_layout_margin"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_progress"
+                android:rating="@{product.rating}"
+                android:stepSize=".1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/base_layout_margin"
+                android:layout_marginTop="@dimen/base_layout_margin"
+                android:layout_marginEnd="@dimen/base_layout_margin"
+                android:gravity="center"
+                android:text="@{product.price}"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rating"
+                tools:text="300 Kč" />
+
+            <!-- Looks like Google f-ed up with Button backgrounds so we need to use AppCompatButton, weird         -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_layout_margin"
+                android:background="@drawable/bg_btn_outline"
+                android:minWidth="@dimen/none"
+                android:minHeight="@dimen/none"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
+                android:text="@string/add_to_cart"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

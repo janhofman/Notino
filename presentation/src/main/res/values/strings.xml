@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Notino</string>
+    <string name="loading_error">Oops, something is not right ;)</string>
+    <string name="no_data_info">Nothing to be had here :(</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="item_added_to_cart">Item was added to your shopping cart</string>
+    <string name="item_added_to_favourites">Product was added to your favourites</string>
+    <string name="item_removed_favourites">Product was removed from your favourites</string>
+    <string name="page_format">Page %d</string>
+</resources>

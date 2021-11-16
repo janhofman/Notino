@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="product"
+            type="hofy.notino.presentation.model.product.ProductVO" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_layout_margin">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            imageSrc="@{product.imageSrc}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/none"
+            android:padding="@dimen/base_layout_margin_half_up"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnFavourite"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:padding="4dp"
+            android:src="@{product.favourite?@drawable/btn_favourite_checked:@drawable/btn_favourite}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:gravity="center"
+            android:text="@{product.brand}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgProduct"
+            tools:text="HUGO" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:gravity="center"
+            android:text="@{product.name}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBrand"
+            tools:text="BOSS Botled" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:gravity="center"
+            android:text="@{product.description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:text="deostick pro muže 75ml" />
+
+        <hofy.notino.presentation.ui.custom.RatingBarSvg
+            android:id="@+id/rating"
+            visible="@{product.rating != 0f}"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/rating_star_height"
+            android:layout_marginTop="@dimen/base_layout_margin"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_progress"
+            android:rating="@{product.rating}"
+            android:stepSize=".1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_layout_margin"
+            android:layout_marginTop="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:gravity="center"
+            android:text="@{product.price}"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rating"
+            tools:text="300 Kč" />
+
+        <!-- Looks like Google f-ed up with Button backgrounds so we need to use AppCompatButton, weird         -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_layout_margin"
+            android:background="@drawable/bg_btn_outline"
+            android:minWidth="@dimen/none"
+            android:minHeight="@dimen/none"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:text="@string/add_to_cart"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

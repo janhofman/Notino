@@ -1,0 +1,36 @@
+{
+  "productId": 16024282,
+  "brand": {
+    "id": "12187",
+    "name": "Philips"
+  },
+  "attributes": {
+    "Master": true,
+    "AirTransportDisallowed": true,
+    "PackageSize": {
+      "height": 220,
+      "width": 110,
+      "depth": 65
+    },
+    "FreeDelivery": true
+  },
+  "annotation": "sonický elektrický zubní kartáček pro děti s Bluetooth",
+  "masterId": 16024282,
+  "url": "/philips/sonicare-for-kids-3-hx6352-42-sonicky-elektricky-zubni-kartacek-pro-deti-s-bluetooth/",
+  "orderUnit": "ks",
+  "price": {
+    "value": 1399,
+    "currency": "CZK"
+  },
+  "imageUrl": "philips/8710103931096_01-o/philips-sonicare-for-kids-3-hx6352_42-sonicky-elektricky-zubni-kartacek-pro-deti-s-bluetooth_.jpg",
+  "name": "Sonicare For Kids 3+ HX6352/42",
+  "productCode": "PHI524D_KETB34",
+  "reviewSummary": {
+    "score": 5,
+    "averageRating": 5
+  },
+  "stockAvailability": {
+    "code": "moreThan20",
+    "count": null
+  }
+}

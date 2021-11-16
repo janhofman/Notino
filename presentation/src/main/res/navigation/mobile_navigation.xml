@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_products">
+
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="hofy.notino.presentation.ui.fragment.products.ProductsFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_products">
+        <action
+            android:id="@+id/action_Navigate_To_Product_Detail"
+            app:destination="@+id/navigation_product_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_product_detail"
+        android:name="hofy.notino.presentation.ui.fragment.products.detail.ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="product"
+            app:argType="hofy.notino.presentation.model.product.ProductVO" />
+    </fragment>
+</navigation>

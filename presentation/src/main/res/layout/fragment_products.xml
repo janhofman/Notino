@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="hofy.notino.presentation.ui.fragment.products.ProductsFragmentViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refreshLayout"
+        refreshing="@{vm.viewStateLiveData.refresh}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProducts"
+                visible="@{vm.viewStateLiveData.data}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_product" />
+
+            <FrameLayout
+                visible="@{vm.viewStateLiveData.loading || vm.viewStateLiveData.error}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/windowBackground">
+
+                <hofy.notino.presentation.ui.custom.ProgressView
+                    visible="@{vm.viewStateLiveData.loading}"
+                    android:layout_width="@dimen/progress_large"
+                    android:layout_height="@dimen/progress_large"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    visible="@{vm.viewStateLiveData.error}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/loading_error" />
+            </FrameLayout>
+        </FrameLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

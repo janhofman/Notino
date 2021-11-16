@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="outline_btn_bg">@color/black</color>
+    <color name="outline_btn_stroke">@color/white</color>
+</resources>

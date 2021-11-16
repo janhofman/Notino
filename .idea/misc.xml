@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.30923076923076925" />
+        <entry key="app/src/main/res/drawable/ic_launche_background.xml" value="0.30923076923076925" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.30923076923076925" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.30923076923076925" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2390625" />
+        <entry key="app/src/main/res/layout/fragment_rock_creation.xml" value="0.2390625" />
+        <entry key="app/src/main/res/layout/fragment_route_creation.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_routes.xml" value="0.11979166666666667" />
+        <entry key="app/src/main/res/layout/fragment_sector_creation.xml" value="0.2390625" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2390625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12314814814814815" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.30923076923076925" />
+        <entry key="presentation/src/main/res/drawable/animated_logo.xml" value="0.12314814814814815" />
+        <entry key="presentation/src/main/res/drawable/bg_btn_outline.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/bg_btn_outline_normal.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/bg_btn_ripple.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/btn_favourite.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/btn_favourite_checked.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/ic_heart_empty.xml" value="0.12314814814814815" />
+        <entry key="presentation/src/main/res/drawable/ic_heart_fill.xml" value="0.12314814814814815" />
+        <entry key="presentation/src/main/res/drawable/ic_star.xml" value="0.1037037037037037" />
+        <entry key="presentation/src/main/res/drawable/ic_star_empty.xml" value="0.12314814814814815" />
+        <entry key="presentation/src/main/res/drawable/rating_empty.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/rating_fill.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/drawable/rating_progress.xml" value="0.13425925925925927" />
+        <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.159375" />
+        <entry key="presentation/src/main/res/layout/fragment_diary.xml" value="0.14479166666666668" />
+        <entry key="presentation/src/main/res/layout/fragment_home.xml" value="0.159375" />
+        <entry key="presentation/src/main/res/layout/fragment_map.xml" value="0.15989583333333332" />
+        <entry key="presentation/src/main/res/layout/fragment_product_detail.xml" value="0.1" />
+        <entry key="presentation/src/main/res/layout/fragment_products.xml" value="0.1" />
+        <entry key="presentation/src/main/res/layout/fragment_profile.xml" value="0.15989583333333332" />
+        <entry key="presentation/src/main/res/layout/fragment_rope_up.xml" value="0.159375" />
+        <entry key="presentation/src/main/res/layout/fragment_route_creation.xml" value="0.1" />
+        <entry key="presentation/src/main/res/layout/fragment_routes.xml" value="0.25901639344262295" />
+        <entry key="presentation/src/main/res/layout/item_loading.xml" value="0.16145833333333334" />
+        <entry key="presentation/src/main/res/layout/item_page.xml" value="0.29791666666666666" />
+        <entry key="presentation/src/main/res/layout/item_product.xml" value="0.1" />
+        <entry key="presentation/src/main/res/layout/item_route.xml" value="0.29791666666666666" />
+        <entry key="presentation/src/main/res/menu/bottom_nav_menu.xml" value="0.15989583333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="azul-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

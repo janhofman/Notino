@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">@color/notino_pink</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="outline_btn_bg">@color/white</color>
+    <color name="outline_btn_stroke">@color/black</color>
+    <color name="notino_pink">#D6447C</color>
+    <color name="notino_gray_d1">#DADADA</color>
+</resources>
